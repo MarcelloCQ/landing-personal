@@ -1,0 +1,62 @@
+.header {
+  width: 100%;
+  /* height: 140px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 2px #0c0c0c;
+  padding: 20px;
+}
+
+.headerContainer {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 70%;
+  gap: 0.4em;
+}
+
+.btnNavbar p {
+  color: #ffffff;
+}
+
+.btnContainer {
+  display: flex;
+  width: 0%;
+  overflow: hidden;
+  transition: ease-in-out all 0.3s;
+}
+
+.btnOpenMenu {
+  width: 30%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .btnContainer {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btnOpenMenu {
+    display: none;
+  }
+
+  .imgContainer {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 0.4em;
+  }
+}

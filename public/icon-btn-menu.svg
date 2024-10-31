@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="0" y="0" width="94" height="9" rx="4.5" ry="4.5"/>
+  <rect class="cls-1" x="0" y="24" width="94" height="9" rx="4.5" ry="4.5"/>
+  <rect class="cls-1" x="0" y="12" width="94" height="9" rx="4.5" ry="4.5"/>
+  <rect class="cls-1" x="0" y="36" width="94" height="9" rx="4.5" ry="4.5"/>
+</svg>
