@@ -1,24 +1,38 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import { Active } from "./sidebar";
 
 const links = [
   {
-    name: "About me",
+    name: "Inicio",
     href: "/",
+  },
+  {
+    name: "Nosotros",
+    href: "/nosotros",
+  },
+  {
+    name: "Servicios",
+    href: "/servicios",
+  },
+  {
+    name: "Staf",
+    href: "/staf",
+  },
+  {
+    name: "Contacto",
+    href: "/contacto",
   },
 ];
 
-export default function NavLinks() {
+export default function NavLinks({ on }: Active) {
   return (
-    <div className={styles.btnContainer}>
+    <div
+      className={on ? `${styles.btnContainerActive}` : `${styles.btnContainer}`}
+    >
       {links.map((link) => {
         return (
-          <Link
-            key={link.name}
-            href={link.href}
-            target="_self"
-            className={styles.btnNavbar}
-          >
+          <Link key={link.name} href={link.href} className={styles.btnNavbar}>
             <p>{link.name}</p>
           </Link>
         );

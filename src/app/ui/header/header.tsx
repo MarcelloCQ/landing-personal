@@ -1,10 +1,19 @@
+"use client";
 import Image from "next/image";
 import NavLinks from "./nav-links";
 import styles from "./page.module.css";
+import Sidebar from "./sidebar";
+import { useState } from "react";
 
 export default function Header() {
+  const [isActive, setIsActive] = useState(false);
+
+  const activeSideBar = () => {
+    setIsActive(!isActive);
+  };
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} mb-2`}>
       <div className={styles.headerContainer}>
         <div className={styles.imgContainer}>
           <Image
@@ -36,7 +45,11 @@ export default function Header() {
             height={10}
           />
         </div>
-        <button className={styles.btnOpenMenu}>
+        <button
+          onClick={() => activeSideBar()}
+          className={styles.btnOpenMenu}
+          type={"button"}
+        >
           <Image
             aria-hidden
             src="/icon-btn-menu.svg"
@@ -45,7 +58,8 @@ export default function Header() {
             height={40}
           />
         </button>
-        <NavLinks />
+        <Sidebar on={isActive} closeModal={activeSideBar} />
+        <NavLinks on={false} />
       </div>
     </header>
   );
