@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import { Active } from "./sidebar";
+import { Active } from "../props";
 
 const links = [
   {

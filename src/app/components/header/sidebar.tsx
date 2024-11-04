@@ -2,15 +2,7 @@ import { useEffect } from "react";
 import NavLinks from "./nav-links";
 import styles from "./page.module.css";
 import Image from "next/image";
-
-export type Active = {
-  on: boolean;
-};
-
-export type ChildComponentProps = {
-  on: boolean;
-  closeModal: () => void;
-};
+import { ChildComponentProps } from "../props";
 
 export default function Sidebar({ on, closeModal }: ChildComponentProps) {
   useEffect(() => {}, [on]);

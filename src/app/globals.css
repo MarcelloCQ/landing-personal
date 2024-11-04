@@ -76,6 +76,13 @@ a {
   margin-bottom: 100px;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -1,20 +1,16 @@
-import Footer from "../ui/footer/footer";
-import Header from "../ui/header/header";
+import Footer from "../components/footer/footer";
+import Header from "../components/header/header";
 import styles from "@/app/page.module.css";
+import { ToShow } from "../props";
 
-export type Show = {
-  show: boolean;
-};
-
-export default function Contacto({ show = true }: Show) {
-  console.log(show);
+export default function Contacto({ isShow = true }: ToShow) {
   return (
     <div className={`${styles.page}`}>
-      {show ? <Header /> : <></>}
+      {isShow ? <Header /> : <></>}
       <section className={`mb-10`}>
         <h1>Contacto</h1>
       </section>
-      {show ? <Footer /> : <></>}
+      {isShow ? <Footer /> : <></>}
     </div>
   );
 }

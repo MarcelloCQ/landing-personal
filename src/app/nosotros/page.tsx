@@ -1,16 +1,16 @@
-import { Show } from "../contacto/page";
-import Footer from "../ui/footer/footer";
-import Header from "../ui/header/header";
+import { ToShow } from "../props";
+import Footer from "../components/footer/footer";
+import Header from "../components/header/header";
 import styles from "@/app/page.module.css";
 
-export default function Nosotros({ show = true }: Show) {
+export default function Nosotros({ isShow = true }: ToShow) {
   return (
     <div className={`${styles.page}`}>
-      {show ? <Header /> : <></>}
+      {isShow ? <Header /> : <></>}
       <section className="mb-10">
         <h1>Nosotros</h1>
       </section>
-      {show ? <Footer /> : <></>}
+      {isShow ? <Footer /> : <></>}
     </div>
   );
 }
