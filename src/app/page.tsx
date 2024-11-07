@@ -3,20 +3,18 @@ import Nosotros from "./nosotros/page";
 import styles from "./page.module.css";
 import Servicios from "./servicios/page";
 import Staf from "./staf/page";
-import Footer from "./components/footer/footer";
-import Header from "./components/header/header";
+import Inicio from "./inicio";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Header />
       <main className={styles.main}>
-        <Contacto isShow={false} />
-        <Nosotros isShow={false} />
-        <Servicios isShow={false} />
-        <Staf isShow={false} />
+        <Inicio />
+        <Nosotros />
+        <Servicios />
+        <Staf />
+        <Contacto />
       </main>
-      <Footer />
     </div>
   );
 }

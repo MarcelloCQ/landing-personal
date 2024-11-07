@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { geistMono, geistSans, montserrat } from "@/app/components/fonts";
+// import { geistMono, geistSans, montserrat } from "@/app/components/fonts";
 import "./globals.css";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 
 export const metadata: Metadata = {
   title: "Marcello Crescimbeni Personal Landing",
@@ -15,10 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className}`}
-      >
+      <body className={``}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
