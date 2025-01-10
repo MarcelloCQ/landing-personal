@@ -1,19 +1,14 @@
-import Contacto from "./contacto/page";
-import Nosotros from "./nosotros/page";
-import styles from "./page.module.css";
-import Servicios from "./servicios/page";
-import Staf from "./staf/page";
+import Staf from "./components/sections/staf";
 import Inicio from "./inicio";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <Inicio />
-        <Nosotros />
-        <Servicios />
+        {/* Renderiza aquí todos los componentes con la información de las secciones, no las páginas */}
         <Staf />
-        <Contacto />
       </main>
     </div>
   );
